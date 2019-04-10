@@ -10,6 +10,10 @@ Rails.application.routes.draw do
       get :user_with_most_tickets
     end
   end
-  resources :events
+  resources :events do
+    collection do
+      get :upcoming_events
+    end
+  end
   resources :event_venues
 end

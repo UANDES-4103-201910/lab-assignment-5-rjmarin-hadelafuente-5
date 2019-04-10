@@ -61,6 +61,16 @@ class EventsController < ApplicationController
     end
   end
 
+  def upcoming_events
+    today = Date.today
+    three_months_later = today + 3.month
+    @event = Event.where("start_date > ? and start_date < ?", today, three_months_later)
+    puts @event
+    respond_to do |format|
+      format.html {render :show}
+      format.json {render json: @event}
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
