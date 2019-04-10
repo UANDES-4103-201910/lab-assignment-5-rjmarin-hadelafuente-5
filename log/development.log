@@ -3290,3 +3290,342 @@ Processing by UsersController#user_with_most_tickets as HTML
 Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/ticket_types" for ::1 at 2019-04-10 16:51:39 -0400
+Processing by TicketTypesController#index as HTML
+  Rendering ticket_types/index.html.erb within layouts/application
+  [1m[36mTicketType Load (0.1ms)[0m  [1m[34mSELECT "ticket_types".* FROM "ticket_types"[0m
+  ↳ app/views/ticket_types/index.html.erb:13
+  Rendered ticket_types/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 16:51:45 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets/16" for ::1 at 2019-04-10 16:51:55 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:67
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tickets" for ::1 at 2019-04-10 16:51:56 -0400
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tickets/1" for ::1 at 2019-04-10 16:53:39 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:67
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Ticket:0x00007fa0d9bb4410>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= @ticket.name %>
+    4: 
+    5: <%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+    6: <%= link_to 'Back', tickets_path %>
+  
+app/views/tickets/show.html.erb:3:in `_app_views_tickets_show_html_erb___2852449959631582763_70164412199640'
+Started GET "/tickets/1" for ::1 at 2019-04-10 16:54:07 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:67
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tickets/1" for ::1 at 2019-04-10 16:54:12 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:67
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tickets/1" for ::1 at 2019-04-10 16:54:18 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:67
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 16:55:03 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-04-10 16:56:55 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-10 16:56:57 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-04-10 16:57:04 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4gSUbzl+cSWv9z23+REJwJp9H0uSghROR7KDyfhev2nixDCmgZN+lp9FEATbL6S8usmq0HimevHhas8Yps9L0g==", "users"=>{"name"=>"asdasd|", "lastname"=>"asdasd", "email"=>"asdasd", "password"=>"[FILTERED]", "address"=>"asdasda"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-04-10 20:57:04.811924"], ["updated_at", "2019-04-10 20:57:04.811924"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/13" for ::1 at 2019-04-10 16:57:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:78
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2019-04-10 16:57:06 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ticket_types/1/tickets.json" for ::1 at 2019-04-10 16:59:15 -0400
+Processing by TicketsController#index as JSON
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.json.jbuilder
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.json.jbuilder:1
+  Rendered tickets/_ticket.json.jbuilder (1.2ms)
+  Rendered tickets/_ticket.json.jbuilder (0.4ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.5ms)
+  Rendered tickets/_ticket.json.jbuilder (0.9ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.2ms)
+  Rendered tickets/_ticket.json.jbuilder (0.2ms)
+  Rendered tickets/_ticket.json.jbuilder (0.2ms)
+  Rendered tickets/_ticket.json.jbuilder (0.2ms)
+  Rendered tickets/_ticket.json.jbuilder (0.1ms)
+  Rendered tickets/index.json.jbuilder (18.0ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tickets.json" for ::1 at 2019-04-10 16:59:40 -0400
+Processing by TicketsController#index as JSON
+  Rendering tickets/index.json.jbuilder
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.json.jbuilder:1
+  Rendered tickets/_ticket.json.jbuilder (1.5ms)
+  Rendered tickets/_ticket.json.jbuilder (0.6ms)
+  Rendered tickets/_ticket.json.jbuilder (0.5ms)
+  Rendered tickets/_ticket.json.jbuilder (0.8ms)
+  Rendered tickets/_ticket.json.jbuilder (0.6ms)
+  Rendered tickets/_ticket.json.jbuilder (0.6ms)
+  Rendered tickets/_ticket.json.jbuilder (0.7ms)
+  Rendered tickets/_ticket.json.jbuilder (1.0ms)
+  Rendered tickets/_ticket.json.jbuilder (0.5ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.3ms)
+  Rendered tickets/_ticket.json.jbuilder (0.4ms)
+  Rendered tickets/_ticket.json.jbuilder (0.4ms)
+  Rendered tickets/_ticket.json.jbuilder (0.4ms)
+  Rendered tickets/_ticket.json.jbuilder (0.2ms)
+  Rendered tickets/_ticket.json.jbuilder (0.2ms)
+  Rendered tickets/index.json.jbuilder (26.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tickets" for ::1 at 2019-04-10 16:59:59 -0400
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:01:13 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:01:46 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:02:07 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:02:18 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:02:33 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:02:52 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/tickets_controller.rb:7:in `[]'
+app/controllers/tickets_controller.rb:7:in `index'
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:03:00 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:04:13 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:04:27 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:06:27 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `tickets' for #<TicketsController:0x00007fa0da1d4110>
+Did you mean?  tickets_url):
+  
+app/controllers/tickets_controller.rb:9:in `index'
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:07:25 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `tickets' for #<TicketsController:0x00007fa0d97b4158>
+Did you mean?  tickets_url):
+  
+app/controllers/tickets_controller.rb:9:in `index'
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:07:44 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."ticket_type_id" = ?[0m  [["ticket_type_id", 1]]
+  ↳ app/views/tickets/index.html.erb:13
+  Rendered tickets/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ticket_types/1/tickets" for ::1 at 2019-04-10 17:08:02 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"ticket_type_id"=>"1"}
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."ticket_type_id" = ?[0m  [["ticket_type_id", 1]]
+  ↳ app/views/tickets/index.html.erb:12
+  Rendered tickets/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
