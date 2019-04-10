@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
+    @user = User.new(params)
 
     respond_to do |format|
       if @user.save
@@ -61,6 +61,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def user_with_most_tickets
+
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
