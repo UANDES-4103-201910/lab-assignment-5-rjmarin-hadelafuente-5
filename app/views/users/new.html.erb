@@ -1,11 +1,21 @@
 <h1>New User</h1>
 <%= form_tag :action => 'create' do %>
 
-  <p><label for = "name">Name</label>:
+  <p><label for = "name">Name</label>
     <%= text_field 'users', 'name' %>
 
-  <p><label for = "lastname">Last Name</label>:
-    <%= text_field 'users', 'lastname' %> <br><br>
+  <label for = "lastname">Last Name</label>
+    <%= text_field 'users', 'lastname' %>
+
+  <label for = "email">Email</label>
+    <%= text_field 'users', 'email' %>
+
+  <label for = "password">Password</label>
+    <%= text_field 'users', 'password' %>
+
+  <label for = "address">Address</label>
+    <%= text_field 'users', 'address' %>
+  </p>
 
   <%= submit_tag "Create" %>
 <% end -%>

@@ -24,8 +24,8 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params)
-
+    @user = User.new(user_params)
+    # (user_params[:name], user_params[:lastname], user_params[:email], user_params[:password], user_params[:address])
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -61,10 +61,17 @@ class UsersController < ApplicationController
     end
   end
 
+  # users/user_with_most_tickets
   def user_with_most_tickets
-
+    sql = "select orders.user_id, count(tickets.order_id) n from orders, tickets where tickets.order_id = orders.id group by orders.user_id order by n desc limit 1"
+    records_array = ActiveRecord::Base.connection.execute(sql)
+    @user = User.find(records_array[0]['user_id'])
+    respond_to do |format|
+      format.html {render :show}
+      format.json {render json: records_array}
+    end
   end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
