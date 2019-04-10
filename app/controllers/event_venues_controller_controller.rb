@@ -1,2 +1,0 @@
-class EventVenuesControllerController < ApplicationController
-end
